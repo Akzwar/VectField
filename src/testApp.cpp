@@ -18,11 +18,9 @@ void testApp::update(){
 }
 
 //--------------------------------------------------------------
-void testApp::draw(){// set the shape color
+void testApp::draw(){
 	ofBackground(0, 0, 20);
     glBegin(GL_POINTS);
-        //glColor3f(200.0, 0.0, 100.0);
-        //glVertex2f(p.V.x,p.V.y);
         glColor3f(magnitude[5], magnitude[100], magnitude[50]);
         for(int i=0;i<COUNT;i++)
             glVertex2f(p.parts[i].x, p.parts[i].y);
@@ -34,14 +32,6 @@ void testApp::draw(){// set the shape color
     for(int i=0;i<=255;i+=5)
     outstring+="\nmagnitude["+ofToString(i,2)+"]="+ofToString(magnitude[i], 2);
     ofDrawBitmapString(outstring, 10,10);
-        //glBegin(GL_LINES);
-    //    glColor3f(0, 200.0, 0);
-    //    glVertex2f(p.V.x+p.V.Vect.x,p.V.y+p.V.Vect.y);
-
-    //    glVertex2f(p.V.x,p.V.y);
-    //glEnd();
-	// start drawng the shape
-
     for(int i=10;i<=128;i+=5)
     {
         glBegin(GL_QUADS);
@@ -67,8 +57,6 @@ void testApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void testApp::mouseMoved(int x, int y ){
-this->x=x-50;
-this->y=y-50;
 }
 
 //--------------------------------------------------------------

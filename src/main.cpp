@@ -8,7 +8,7 @@
 int main( ){
 
     ofAppGlutWindow window;
-	ofSetupOpenGL(&window, SCREEN_WIDTH,SCREEN_HEIGHT, OF_FULLSCREEN);
+	ofSetupOpenGL(&window, SCREEN_WIDTH,SCREEN_HEIGHT, OF_WINDOW);
 	testApp* myapp = new testApp(SCREEN_WIDTH,SCREEN_HEIGHT);
 	ofRunApp(myapp);
 	delete myapp;

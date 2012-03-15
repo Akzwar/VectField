@@ -9,9 +9,7 @@ class testApp : public ofBaseApp{
 	public:
         ~testApp(){delete [] data;}
         bool Exit;
-		int x;
-		int y;
-        testApp(int w, int h){Exit=false;x=300;y=300;p=particles(w,h);}
+        testApp(int w, int h){Exit=false;p=particles(w,h);}
 		void setup();
 		void update();
 		void draw();

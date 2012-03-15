@@ -38,7 +38,12 @@ void particles::recalc()
     {
         atmp.x=0;
         atmp.y=0;
-        for(int j=0;j<V_COUNT;j++)
+        int k;
+        for(k=0;k<V_COUNT;k++)
+            if((int)V[k].Vect.x==0)
+                if((int)V[k].Vect.y==0)
+                    break;
+        for(int j=0;j<k;j++)
         {
             tmp[j].x=V[j].Vect.x;
                 tmp[j].y=V[j].Vect.y;
