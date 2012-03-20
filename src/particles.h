@@ -1,6 +1,6 @@
 #ifndef PARTICLES_H
 #define PARTICLES_H
-#define COUNT 50000
+#define COUNT 70000
 #define V_COUNT 5
 #include <math.h>
 #include <ofVectorMath.h>

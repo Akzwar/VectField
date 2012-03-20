@@ -3,12 +3,23 @@
 #include "ofMain.h"
 #include "particles.h"
 #include "fft.h"
-#define BUFFER_SIZE 256
+#define BUFFER_SIZE 1024
 class testApp : public ofBaseApp{
 
 	public:
-        ~testApp(){delete [] data;}
+        ~testApp()
+        {
+            delete [] data;
+            delete soundStream;
+        }
         bool Exit;
+        ofImage one;
+        ofMesh mesh;
+        ofColor tmpcolor;
+        bool pictavail;
+        bool isdots;
+        bool isdrawim;
+        string outstring;
         testApp(int w, int h){Exit=false;p=particles(w,h);}
 		void setup();
 		void update();
@@ -35,6 +46,9 @@ class testApp : public ofBaseApp{
         float power_a[BUFFER_SIZE];
         float phase[BUFFER_SIZE];
 
-        ofSoundStream soundStream;
+        ofSoundStream* soundStream;
 
 };
+//10-290Hz
+//15-430Hz
+//20-570Hz
